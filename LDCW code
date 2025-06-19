@@ -1,0 +1,94 @@
+#include <iostream>
+using namespace std;
+
+// Function to run the eco-quiz
+int runQuiz() {
+    int score = 0;
+    char answer;
+
+    cout << "===========================" << endl;
+    cout << "     ECO-AWARENESS QUIZ    " << endl;
+    cout << "===========================" << endl;
+
+    cout << "1. What is one common source of renewable energy used in smart cities?\n";
+    cout << "a) Coal\nb) Solar\nc) Natural Gas\nd) Diesel\n";
+    cout << "Your answer: ";
+    cin >> answer;
+    if (tolower(answer) == 'b') score++;
+
+    cout << "\n2. Which best describes a smart grid?\n";
+    cout << "a) Power line for gaming\nb) Digital energy meter only\n";
+    cout << "c) Electricity network with digital management\nd) Fuel-based control center\n";
+    cout << "Your answer: ";
+    cin >> answer;
+    if (tolower(answer) == 'c') score++;
+
+    cout << "\n3. What is the primary benefit of green buildings?\n";
+    cout << "a) Cheaper labor\nb) Energy efficiency\nc) Bigger rooms\nd) Better TV reception\n";
+    cout << "Your answer: ";
+    cin >> answer;
+    if (tolower(answer) == 'b') score++;
+
+    cout << "\n4. What does IoT stand for?\n";
+    cout << "a) Internet of Televisions\nb) Input of Technology\n";
+    cout << "c) Internet of Things\nd) Interface of Tools\n";
+    cin >> answer;
+    if (tolower(answer) == 'c') score++;
+
+    cout << "\n5. Which transport option reduces carbon emissions the most?\n";
+    cout << "a) Electric scooters\nb) Gasoline cars\nc) Motorcycles\nd) Airplanes\n";
+    cin >> answer;
+    if (tolower(answer) == 'a') score++;
+
+    return score;
+}
+
+// Function to calculate smart living score
+void smartLivingCalculator() {
+    float electricity_kwh, public_transport, smart_devices, water_liters, plastic_saved;
+
+    cout << "\n===============================" << endl;
+    cout << "   SMART LIVING CALCULATOR     " << endl;
+    cout << "===============================\n";
+
+    cout << "Enter your average monthly electricity usage in kWh: ";
+    cin >> electricity_kwh;
+    float co2_emissions = electricity_kwh * 0.42; // Rough estimate: 0.42 kg CO2 per kWh
+
+    cout << "How many times do you use public transport in a week? ";
+    cin >> public_transport;
+    float car_saving = public_transport * 2.5; // Assumes 2.5 kg CO2 saved per trip
+
+    cout << "How many smart devices do you use at home (e.g., bulbs, thermostat)? ";
+    cin >> smart_devices;
+    float energy_saving = smart_devices * 1.5; // Assumes 1.5 kWh saved per device per month
+
+    cout << "How many liters of water do you use daily? ";
+    cin >> water_liters;
+
+    cout << "How many plastic items (bottles, bags) do you avoid weekly? ";
+    cin >> plastic_saved;
+    float waste_reduced = plastic_saved * 0.1; // Rough estimate: 0.1 kg landfill per item
+
+    // Display results
+    cout << "\n------ YOUR ECO SUMMARY ------\n";
+    cout << "Estimated CO2 from electricity: " << co2_emissions << " kg/month\n";
+    cout << "CO2 saved using public transport: " << car_saving << " kg/week\n";
+    cout << "Energy saved with smart devices: " << energy_saving << " kWh/month\n";
+    cout << "Daily water usage: " << water_liters << " liters/day\n";
+    cout << "Plastic waste avoided: " << waste_reduced << " kg/week\n";
+    cout << "------------------------------\n";
+}
+
+int main() {
+    cout << "Welcome to Green City, Smart Living Program\n";
+    cout << "===========================================\n\n";
+
+    int quizScore = runQuiz();
+    cout << "\nYou scored " << quizScore << " out of 5 in the Eco-Awareness Quiz.\n";
+
+    smartLivingCalculator();
+
+    cout << "\nThank you for using the Smart Living Program!\n";
+    return 0;
+}
