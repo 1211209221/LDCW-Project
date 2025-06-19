@@ -45,11 +45,11 @@ int runQuiz() {
     if (tolower(answer) == 'b') score++;
 
     // Q4
-    cout << "\n4. What does IoT stand for?" << endl;
-    cout << "a) Internet of Televisions" << endl;
-    cout << "b) Input of Technology" << endl;
-    cout << "c) Internet of Things" << endl;
-    cout << "d) Interface of Tools" << endl;
+    cout << "\n5. How do green rooftops and vertical gardens benefit smart cities?" << endl;
+    cout << "a) Increase internet speed" << endl;
+    cout << "b) Attract birds only" << endl;
+    cout << "c) Reduce heat and improve air quality" << endl;
+    cout << "d) Lower property taxes" << endl;
     cout << "Your answer: ";
     cin >> answer;
     if (tolower(answer) == 'c') score++;
