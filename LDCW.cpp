@@ -116,8 +116,6 @@ int main() {
 
     cout << "\nThank you for using the Smart Living Program!" << endl;
 
-    // To prevent window from closing immediately in Dev C++
-    system("pause");
     return 0;
 }
 
